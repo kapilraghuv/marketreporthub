@@ -15,7 +15,7 @@ export default function Report() {
     useEffect(()=>{
         
         const getReport = async()=>{
-            const reqData = await fetch("http://localhost:8001/api/singlereport/"+ id);
+            const reqData = await fetch(process.env.REACT_APP_FETCH_SINGLE_REPORT_API+ id);
             const resData = await reqData.json();
             console.log(resData);
             setReport(resData);

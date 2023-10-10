@@ -18,7 +18,7 @@ export default function Addcategory() {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('cname', cname);
-        axios.post("http://localhost:8001/create" , formData). then(res =>{
+        axios.post(process.env.REACT_APP_CREATE_CAT_API , formData). then(res =>{
 
         }).catch(er=>{
             console.log(er);

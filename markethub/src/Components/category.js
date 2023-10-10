@@ -7,7 +7,7 @@ const [category, setCategory]= useState([]);
 
 useEffect(()=>{
     const getCategory = async()=>{
-        const reqData = await fetch("http://localhost:8001/api/category");
+        const reqData = await fetch(process.env.REACT_APP_FETCH_CAT_API);
         const resData = await reqData.json();
         setCategory(resData);
       

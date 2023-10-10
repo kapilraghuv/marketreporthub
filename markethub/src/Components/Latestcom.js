@@ -7,7 +7,7 @@ export default function  Latestcom(){
 
     useEffect(()=>{
         const getReport = async()=>{
-            const reqData = await fetch("http://localhost:8001/api/report");
+            const reqData = await fetch(process.env.REACT_APP_FETCH_REPORT_API);
             const resData = await reqData.json();
             console.log(resData);
             setReport(resData);

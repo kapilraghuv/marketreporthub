@@ -124,9 +124,9 @@ const Formsubmit = (e) => {
       
 
 
-        console.log(formData);
+        console.log(formData); 
 
-        axios.post("http://localhost:8001/addreport" , formData). then(res =>{
+        axios.post( process.env.REACT_APP_CREATE_REPORT_API, formData). then(res =>{
             console.log(formData);
 
 
@@ -149,7 +149,7 @@ const Formsubmit = (e) => {
 
     useEffect(()=>{
         const getCategory = async()=>{
-            const reqData = await fetch("http://localhost:8001/api/category");
+            const reqData = await fetch(process.env.REACT_APP_FETCH_CAT_API);
             const resData = await reqData.json();
             console.log(resData);
             setCategory(resData);
