@@ -2,7 +2,7 @@ const mysql = require("mysql2");
 
 const conn = mysql.createConnection({
     user: "root",
-    host: "localhost",
+    host:process.env.NODE_APP_DATABASE_HOST,
     password: "",
     database: "marketreporthub",
     
